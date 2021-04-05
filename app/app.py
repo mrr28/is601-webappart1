@@ -5,8 +5,9 @@ from flask import Flask, Response
 
 app = Flask(__name__)
 
+
 def cities_import() -> List[Dict]:
-    config ={
+    config = {
         'user': 'root',
         'password': 'root',
         'host': 'db',
@@ -23,6 +24,7 @@ def cities_import() -> List[Dict]:
     connection.close()
 
     return result
+
 
 @app.route('/')
 def index() -> str:
